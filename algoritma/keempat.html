@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="kata1"></p>
+
+    <p id="kata2"></p>
+    <p id="kata3"></p>
+    <p id="hasil"></p>
+    
+    
+    <script>
+        const Matrix = [[1, 2, 0], [4, 5, 6], [7, 8, 9]]
+        let output1 = [];
+        let output2 = [];
+
+        for (let i = 0; i < Matrix.length; i++) {
+            
+            for (let j = 0; j < Matrix[i].length; j++) {
+                
+                if (i === j) {
+                    output1.push(Matrix[i][j]);
+                }
+                console.log(i, j);
+                if (i + j === Matrix.length - 1) {
+                    output2.push(Matrix[i][j]);
+                }
+            }
+           
+        }
+
+        let hitung = output1.reduce((a, b) => a + b, 0);
+        let hitung2 = output2.reduce((a, b) => a + b, 0);
+
+        let hasil = hitung - hitung2;
+
+
+
+        document.getElementById("kata1").innerHTML = "Kata: " + Matrix;
+
+        document.getElementById("kata2").innerHTML = "hasil: " + output1;
+        document.getElementById("kata3").innerHTML = "hasil: " + output2;
+        document.getElementById("hasil").innerHTML = "hasil: " + hasil;
+
+
+        
+    </script>
+</body>
+</html>

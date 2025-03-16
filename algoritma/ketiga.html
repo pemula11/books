@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="kata1"></p>
+
+    <p id="kata2"></p>
+    
+    <script>
+        const INPUT = ['xc', 'dz', 'bbb', 'dz']  
+        const QUERY = ['bbb', 'ac', 'dz']  
+        let output = []
+
+        QUERY.forEach(element => {
+            let total = 0
+            for (let i = 0; i < INPUT.length; i++) {
+                if (element === INPUT[i]) {
+                    total++
+                }
+            }
+            output.push(total)
+        });
+
+
+        document.getElementById("kata1").innerHTML = "Kata: " + INPUT;
+
+        document.getElementById("kata2").innerHTML = "hasil: " + output;
+        
+    </script>
+</body>
+</html>

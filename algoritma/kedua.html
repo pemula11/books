@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="kata1"></p>
+
+    <p id="kata2"></p>
+    
+    <script>
+        let kata = "Saya sangat senang mengerjakan soal algoritma";
+        let hasil = 0;
+
+        let arrKata = kata.split(" ");
+
+        for (let i = 0; i<arrKata.length; i++){
+            if (arrKata[i].length > hasil){
+                hasil = arrKata[i].length;
+            }
+        }
+
+
+        document.getElementById("kata1").innerHTML = "Kata: " + kata;
+
+        document.getElementById("kata2").innerHTML = "hasil: " + hasil;
+        
+    </script>
+</body>
+</html>

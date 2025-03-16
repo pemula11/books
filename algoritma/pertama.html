@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="kata1"></p>
+
+    <p id="kata2"></p>
+    
+    <script>
+        let kata = "NEGIE1";
+        let hasil = "";
+        let kataNoNumber = kata.slice(0, kata.length-1);
+        let number = kata.slice(kata.length-1);
+
+        for (let i = kataNoNumber.length-1; i >= 0; i--) {
+            hasil += kata[i];
+        }
+        hasil += number;
+
+
+        document.getElementById("kata1").innerHTML = "Kata: " + kata;
+
+        document.getElementById("kata2").innerHTML = "hasil: " + hasil;
+        
+    </script>
+</body>
+</html>
